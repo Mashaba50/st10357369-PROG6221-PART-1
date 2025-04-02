@@ -36,6 +36,8 @@ public class CybersecurityChatbot
 
     public static void Main(string[] args)
     {
+        //calling my methods
+
         DisplayAsciiArt();
         PlayGreeting();
         GreetUser();
