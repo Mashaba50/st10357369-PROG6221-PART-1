@@ -90,13 +90,13 @@ public class CybersecurityChatbot
         {
             Console.Write("\nAsk me a question (or type 'exit'): ");
             string query = Console.ReadLine();
-
+            // Check if the input is empty
             if (string.IsNullOrWhiteSpace(query))
             {
                 Console.WriteLine("Please enter a valid question.");
-                continue;
+                continue;// Restart the loop if no valid input is provided
             }
-
+            // Exit the query loop if 'exit' is typed
             if (query.ToLower() == "exit")
                 break;
 
@@ -121,22 +121,24 @@ public class CybersecurityChatbot
         else
             return "I didn’t quite understand that. Could you rephrase?";
     }
-
+    // Method to display a header with a specific text, formatted
     private static void DisplayHeader(string headerText)
     {
+
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine("========================================");
         Console.WriteLine($" {headerText}");
         Console.WriteLine("========================================");
-        Console.ResetColor();
+        Console.ResetColor();// Reset color to default
     }
-
+}
+    // Method to display a simple divider line
     private static void DisplayDivider()
     {
         Console.WriteLine("----------------------------------------");
     }
-
-    private static void TypeWriteLine(string text, int delay = 50)
+// Method to simulate typing effect in the console for better user experience
+private static void TypeWriteLine(string text, int delay = 50)
     {
         foreach (char c in text)
         {
